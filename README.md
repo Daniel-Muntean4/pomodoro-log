@@ -1,8 +1,11 @@
 # Svelte + Vite - Pomodoro Website
 
+This app allow students to organize their studies with fixed time of work/study that are registered.
+
 The entities are the study sessions which have a date, duration and finish informations. As well as topic, or subject for which I the user will study.
 
 The application  has a light dark/version. The events are stored in browser local storage. Framework: Svelte.
+
 
 ## Flows of the app
 
