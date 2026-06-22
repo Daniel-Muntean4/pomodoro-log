@@ -8,8 +8,9 @@
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
-  --bg-btn:#CAEACD;
+  --bg-btn:#C5840D;
   --text-btn: #332714;
+  --hover-btn:#F2B23A;
 
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -30,6 +31,7 @@
   @media (max-width: 1024px) {
     font-size: 16px;
   }
+
 }
 [data-theme="dark"] {
     --text: #9ca3af;
@@ -43,6 +45,7 @@
     --accent-bg: rgba(200,200,200, 0.5);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
+  --hover-btn:#7DF9FF;
 
   --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
@@ -264,6 +267,11 @@ code {
   margin: 10px;
 
 }
+.history-list{
+  text-align: left;
+  margin-left: 5%;
+}
+
 .toggle-item{
   border-radius: 60% ;
   padding: 13px 15px;
@@ -272,6 +280,8 @@ code {
 .clock{
   font-size: 64px;
   font-family: "tabular-nums";
+  font-variant-numeric: tabular-nums;
+
   font-weight: 300;
 }
 .in-btn{
@@ -293,10 +303,34 @@ code {
 
 }
 .topic-btn{
+  box-sizing: border-box;
+
   width: 25vw;
   height: 10vh;
   margin: 5px 20px;
   background-color:var(--bg-btn);
 color: var(--text-btn);
+  border: #ffeac4;
 
+}
+
+/*.nav-btn{*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  margin-top: 2vh;*/
+/*}*/
+.topic-btn:hover{
+  border: 3px solid var(--hover-btn );
+
+
+}
+
+.mode{
+  position: fixed;
+  margin: 2vh;
+  bottom:15px;
+  right: 10.5%;
+  display: flex;
+  radius: 20px;
 }
