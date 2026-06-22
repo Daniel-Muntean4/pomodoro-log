@@ -352,6 +352,8 @@
 		<p>Date: {new Date( s[0]).toLocaleDateString()} Start: {new Date( s[0]).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' ,second: '2-digit'})} Finish:  {new Date( s[1]).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' ,second: '2-digit'})} Topic: {topics.get(s[3])} Duration: {Math.floor(s[2]/60000)} minutes
 		</p>{/each}
 
+
+
 	{/if}
 	</div>
 

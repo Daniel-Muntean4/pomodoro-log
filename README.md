@@ -1,43 +1,28 @@
-# Svelte + Vite
+# Svelte + Vite - Pomodoro Website
 
-This template should help get you started developing with Svelte in Vite.
+This app allow students to organize their studies with fixed time of work/study that are registered.
 
-## Recommended IDE Setup
+The entities are the study sessions which have a date, duration and finish informations. As well as topic, or subject for which I the user will study.
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+The application  has a light dark/version. The events are stored in browser local storage. Framework: Svelte.
 
-## Need an official Svelte framework?
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Flows of the app
 
-## Technical considerations
+This website allows the user to set a pomodoro timer, choosing from the 25, 30 and 50 minutes options, also the user should press a box from the options for topics available, that option will be considered the next session topic. The user will be able to choose the topic by clicking, not writing the topics.
 
-**Why use this over SvelteKit?**
+The moment start is pressed teh session starts, when the user presses stop the session ends and is recorded in history, if the user finished the session without pausing the session is recorded at the end.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+The moment the active session ends the short pause starts, after three short pauses the long pauses start instead.
+The pomodoro, short and long breaks can be accessed by buttons by the user, as well.
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+When pressing History a schedule history is displayed, that can be filtered by date, week, month etc. Also the history can be filtered by topic or by combining date and topic.
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+The history and the prefered theme are saved after the user exiting the site.
 
-**Why include `.vscode/extensions.json`?**
+## Demo:
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
 
-**Why enable `checkJs` in the JS template?**
+<img width="800" height="518" alt="Grabación de pantalla 2026-06-11 a las 17 19 43" src="https://github.com/user-attachments/assets/6dfd8748-684d-4378-a2da-b6ccabc8a2af" />
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
 
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
