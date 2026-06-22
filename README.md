@@ -20,9 +20,9 @@ When pressing History a schedule history is displayed, that can be filtered by d
 
 The history and the prefered theme are saved after the user exiting the site.
 
+## Backend features
+Information is saved in a H2 database not in the localStorage, if the server is available, and pagination allows navigation with 12 elements per page.
+
 ## Demo:
 
-
 <img width="800" height="518" alt="Grabación de pantalla 2026-06-11 a las 17 19 43" src="https://github.com/user-attachments/assets/6dfd8748-684d-4378-a2da-b6ccabc8a2af" />
-
-
